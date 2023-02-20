@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./wordle.js"></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div></div>
+      <h2 class="header-name" style="font-size: 35px">Wordle</h2>
+      <ul class="list">
+        <label onclick="GoDark()" style="color: black; font-size: 20px" id="dark">&#9681</label>
+        <label onclick="toggleDiv()" style="color: black; font-size: 20px" id="question">
+          &#63;
+        </label>
+        <label onclick="infoButton()" style="color: black; font-size: 20px" id="iii">&#9432</label>
+      </ul>
+    </nav>
+    
+    <br />
+    <br />
+    <!-- Main part -->
+    <div id="parent">
+      <div class="left">
+          <div id="board"></div>
+          <img src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif" alt="" style="display: none;" id="imgg">
+          <div class="btn-div">
+          <button class="start-over" onclick="window.location.reload();">
+          Start Over
+          </button>
+        </div>
+      </div>
+      <div id="infobox" class="hidden">
+        <div class="vl"></div>
+        <ul>
+            <li class="hed"><p style="font-weight: heavy; font-size: 40px;">How To Play</p></li>
+            <li><p>Start typing. the letters will appear in the boxes</p></li>
+            <li><p>Remove letters with Backspace</p></li>
+            <li><p>Hit Enter/Return to submit an answer</p></li>
+            <li><p>Letters with green background are in the right spot</p></li>
+            <li><p>Letters with yellow background are in the word, but are in the wrong spots</p></li>
+            <li><p>Letters with gray backgrounds do not exist in the word</p></li>
+            <li><p>If you need a hint, click the &#63; icon</p></li>
+          </ul>
+      </div>
+    </div>
+    <br>
+
+    <br>
+
+
+
+
+
+    <div class="container">
+        <div id="hintSection"></div>
+        <div id="right" style="display: none"></div>
+        <div id="wrong" style="display: none;"></div>
+        <footer>&#169; keys-by-prosper</footer>
+    </div>
+  </body>
+</html>
